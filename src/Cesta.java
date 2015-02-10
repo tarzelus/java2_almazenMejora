@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class  Cesta {
+public class  Cesta extends Manzana{
 //propiedades
 	private String nombreproducto;
 	private Double precioku;
@@ -9,7 +9,9 @@ public class  Cesta {
 	private Cliente cliente;
 	private Double descuento;
 
-
+	 public Cesta() {
+			super();
+		}
 
 
 
@@ -116,6 +118,7 @@ public class  Cesta {
 					       		
 					       		salida4 = bf4.readLine();
 					        }
+					        bf4.close();
 					    }catch(Exception ioe){
 					    	System.out.println("Error: "+ioe);
 					    }
@@ -130,7 +133,7 @@ public class  Cesta {
 			   		int codigo=sc.nextInt();
 
 
-		            ArrayList<Manzana> manzanas = new ArrayList<Manzana>();
+		            //ArrayList<Manzana> manzanas = new ArrayList<Manzana>();
 
 	
 			   		//para recorrer manzanas
