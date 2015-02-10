@@ -8,6 +8,7 @@ public class Manzana {
 	private String color;
 	private Double eurosKilo;
 	private Distribuidor distribuidor;
+	private int cod_barras;
 	//ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
 
 
@@ -63,6 +64,18 @@ public class Manzana {
 			distribuidor=distribuidor1;
 		}
 	
+
+	public int getCod_barras()
+	{
+		return cod_barras;
+	}
+	
+	public void  setCod_barras(int cod_barras1)
+	{
+		cod_barras=cod_barras1;
+	}
+
+	
 	
 	
 	//escrinir manzanas
@@ -77,7 +90,7 @@ public class Manzana {
 		System.out.println("\nCuantas manzanas quieres registrar?: ");
 		int cuantas = sc.nextInt();
 		
-		for (int m=0 ; m<=cuantas ; m++){
+		for (int m=0 ; m<cuantas ; m++){
 			Manzana manzana = new Manzana();
 			System.out.println("Introduce el tipo de manzana: ");
 			manzana.setTipoManzana(sc.next());
@@ -87,6 +100,8 @@ public class Manzana {
 			manzana.setColor(sc.next());
 			System.out.println("Introduce la cantidad de kilos de la manzana: ");
 			manzana.setEurosKilo(sc.nextDouble());
+			System.out.println("Introduce el numero del codigo de barras de la manzana: ");
+			manzana.setCod_barras(sc.nextInt());
 			System.out.println("Introduce el nombre del distribuidor de la manzana: ");
 			String di = sc.next();
 			distribuman.add(di);
