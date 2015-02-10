@@ -32,7 +32,6 @@ public static void main (String args[]) throws IOException{
 				manzana.escribirManzana();
 				manzana.impresionManzana();
 				
-							
 				//-----------------Introducccion de datos de la leche------------------
 					
 				leche.escribirLeche();
@@ -56,7 +55,7 @@ public static void main (String args[]) throws IOException{
 	    	break;
 	    	
 	    	case 4:
-	    		cesta.cestaa();
+	    		//cesta.cestaa();
 	    	break;
     	
 	    

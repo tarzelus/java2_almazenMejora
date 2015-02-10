@@ -1,18 +1,19 @@
 import java.util.*;
 import java.io.*;
 
-public class Manzana {
+public class Manzana extends Productos{
 //propiedades
 	private String tipoManzana;
 	private String procedencia;
 	private String color;
-	private Double eurosKilo;
-	private Distribuidor distribuidor;
-	private int cod_barras;
-	//ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
+
+
 
 
 //métodos getter y setter
+	public Manzana() {
+		super();
+	}
 
 	public String getTipoManzana()
 		{
@@ -44,36 +45,7 @@ public class Manzana {
 			color=color1;
 		}
 
-	public Double getEurosKilo()
-		{
-			return eurosKilo;
-		}
-		
-	public void  setEurosKilo(Double eurosKilo1)
-		{
-			eurosKilo=eurosKilo1;
-		}
 
-	public Distribuidor getDistribuidor()
-		{
-			return distribuidor;
-		}
-		
-	public void  setDistribuidor(Distribuidor distribuidor1)
-		{
-			distribuidor=distribuidor1;
-		}
-	
-
-	public int getCod_barras()
-	{
-		return cod_barras;
-	}
-	
-	public void  setCod_barras(int cod_barras1)
-	{
-		cod_barras=cod_barras1;
-	}
 
 	
 	
@@ -126,8 +98,7 @@ public class Manzana {
             System.out.println(" \nColor : "+manzanas.get(m).getColor() );
             System.out.println("	 \nEuros Kilo: "+manzanas.get(m).getEurosKilo());
 
-            Leerdistri leer = new Leerdistri();
-            
+           
             ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
 
             distribuidores=Leerdistri.Leer();

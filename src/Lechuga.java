@@ -2,15 +2,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Lechuga {
+public class Lechuga extends Productos{
 
 //propiedades
 private String tipoLechuga;
 private String procedencia;
 private String color;
-private Double eurosUnidad;
-private Distribuidor distribuidor;
-private int cod_barras;
+
+
 
 //métodos getter y setter
 
@@ -44,35 +43,11 @@ public String getTipoLechuga()
 			color=color1;
 		}
 
-		public Double getEurosUniad()
-		{
-			return eurosUnidad;
+		
+		public Lechuga() {
+			super();
 		}
 		
-		public void  setEurosUnidad(Double eurosUnidad1)
-		{
-			eurosUnidad=eurosUnidad1;
-		}
-
-		public Distribuidor getDistribuidor()
-		{
-			return distribuidor;
-		}
-		
-		public void  setDistribuidor(Distribuidor distribuidor1)
-		{
-			distribuidor=distribuidor1;
-		}
-		
-		public int getCod_barras()
-		{
-			return cod_barras;
-		}
-		
-		public void  setCod_barras(int cod_barras1)
-		{
-			cod_barras=cod_barras1;
-		}
 		
 		//***********escribir e imprimir lechuga***********************
 		

@@ -106,9 +106,11 @@ public String getNombre(){
 		       		
 		       		salida3 = bf3.readLine();
 		        }
+		       bf3.close();
 		    }catch(Exception ioe){
 		    	System.out.println("Error: "+ioe);
 		    }
+		    
 		
 		
 		
