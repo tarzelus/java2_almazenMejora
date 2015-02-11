@@ -59,7 +59,7 @@ public class Manzana extends Productos{
 	ArrayList<Manzana> manzanas = new ArrayList<Manzana>();
     ArrayList<String> distribuman = new ArrayList<String>();
     
-	public void escribirManzana(){
+	public void escribirManzanas(){
 		
 		System.out.println("\nCuantas manzanas quieres registrar?: ");
 		int cuantas = sc.nextInt();
@@ -89,7 +89,7 @@ public class Manzana extends Productos{
 	
 	
 	
-	public void impresionManzana() throws IOException{
+	public void impresionManzanas() throws IOException{
 
 		//---------impresion de las manzanas con sus respectivos distribuidor-------------
 		System.out.println(" \n\n**************manzanas**************" );
@@ -98,7 +98,7 @@ public class Manzana extends Productos{
 			System.out.println(" \n\nTipo de manzana: "+manzanas.get(m).getTipoManzana() );
             System.out.println(" \nProcedencia: "+manzanas.get(m).getProcedencia());
             System.out.println(" \nColor : "+manzanas.get(m).getColor() );
-            System.out.println("	 \nEuros Kilo: "+manzanas.get(m).getEurosKilo());
+            System.out.println(" \nEuros Kilo: "+manzanas.get(m).getEurosKilo());
 
            
             ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();

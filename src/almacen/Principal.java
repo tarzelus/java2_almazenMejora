@@ -18,6 +18,13 @@ public static void main (String args[]) throws IOException{
 		Scanner sc = new Scanner(System.in);
 		int quehacer = 0;
 		
+
+    	Leche leche = new Leche();
+    	Lechuga lechuga = new Lechuga();
+    	Manzana manzana = new Manzana();
+    	Cliente cliente = new Cliente();
+    	Cesta cesta = new Cesta();
+		
 		do 
 		{
 		
@@ -26,13 +33,9 @@ public static void main (String args[]) throws IOException{
     	System.out.println(" \n 	2) Lectura de productos" );
     	System.out.println(" \n 	3) Ver los Clientes" );
     	System.out.println(" \n 	4) Crear Cesta" );
+    	System.out.println(" \n 	0) Salir" );
     	quehacer = sc.nextInt();
 
-    	Leche leche = new Leche();
-    	Lechuga lechuga = new Lechuga();
-    	Manzana manzana = new Manzana();
-    	Cliente cliente = new Cliente();
-    	Cesta cesta = new Cesta();
     	
     	switch (quehacer){
 
@@ -40,24 +43,23 @@ public static void main (String args[]) throws IOException{
 			
 		        //-----------------Introducccion de datos de las manzanas------------------
 						
-				manzana.escribirManzana();
-				manzana.impresionManzana();
+				manzana.escribirManzanas();
 				
 				//-----------------Introducccion de datos de la leche------------------
 					
 				leche.escribirLeche();
-				leche.imprimirLeche();
 				
 				//-----------------Introducccion de datos de las lechugas ------------------
 				
 				lechuga.escribirLechuga();
-				lechuga.imprimirLechuga();
 							
 			break;
 			
 	    	case 2:	
 				
-				
+	    		manzana.impresionManzanas();
+	    		leche.imprimirLeche();
+	    		lechuga.imprimirLechuga();
 				
 			break;
 			
