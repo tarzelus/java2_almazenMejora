@@ -86,6 +86,8 @@ public class Distribuidor {
 				        
 				        Contacto contacto = new Contacto();
 			       		Direccion direccion = new Direccion();
+			       		Productos productos = new Productos();
+			       		Manzana manzana = new Manzana();
 
 				       
 				        while(salida2!=null){
@@ -119,6 +121,8 @@ public class Distribuidor {
 					       		distribuidor.setPersonaContacto(contacto);
 				   
 					       		distribuidores.add(distribuidor);
+
+					       		manzana.setDistribuidor(distribuidores);
 				       		}
 				       		salida2 = bf2.readLine();
 				        }

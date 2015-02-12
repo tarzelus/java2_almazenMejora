@@ -117,13 +117,6 @@ public class Manzana extends Productos{
 	}
 	
 	
-	
-	
-	
-	private void setDistribuidor(Object setNombre) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public void impresionManzanas() throws IOException{
 
@@ -140,12 +133,12 @@ public class Manzana extends Productos{
            
            diss = manzanas.get(m).getDistribuidor();
            System.out.println(diss.get(m).getNombre());
-          /* for(int i=0; i<diss.size(); i++){
+           /*for(int i=0; i<diss.size(); i++){
             	System.out.println(diss.get(i).getNombre());
             	System.out.println(diss.get(i).getCif());
             	//System.out.println(getDistribuidor().get(i).getDireccion());
             	//System.out.println(getDistribuidor().get(i).getPersonaContacto());
-            }*/	
+            }*/
 
            
             //ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();

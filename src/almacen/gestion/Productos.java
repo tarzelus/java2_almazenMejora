@@ -1,16 +1,18 @@
 package almacen.gestion;
 
+import java.util.ArrayList;
+
 public class Productos {
-	private Distribuidor distribuidor;
+	private ArrayList<Distribuidor> distribuidor;
 	private int cod_barras;
 	private Double eurosKilo, eurosUnidad, eurosLitro;
 		
-	public Distribuidor getDistribuidor()
+	public ArrayList<Distribuidor> getDistribuidor()
 	{
 		return distribuidor;
 	}
 	
-	public void  setDistribuidor(Distribuidor distribuidor1)
+	public void  setDistribuidor(ArrayList<Distribuidor> distribuidor1)
 	{
 		distribuidor=distribuidor1;
 	}
