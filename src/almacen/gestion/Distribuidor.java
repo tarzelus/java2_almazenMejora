@@ -83,6 +83,9 @@ public class Distribuidor {
 				        String [] cortarString2 = null;	
 				        String [] cortarString3 = null;	
 				        Distribuidor distribuidor = new Distribuidor();
+				        
+				        Contacto contacto = new Contacto();
+			       		Direccion direccion = new Direccion();
 
 				       
 				        while(salida2!=null){
@@ -97,7 +100,7 @@ public class Distribuidor {
 					       		distribuidor.setNombre (cortarString1[0]);
 					       		distribuidor.setCif (cortarString1[1]);
 	
-					       		Direccion direccion = new Direccion();
+
 					       		cortarString2 = cortarString[1].split(",");
 					       		direccion.setCiudad  (cortarString2[0]);
 					       		direccion.setCalle  (cortarString2[1]);
@@ -106,7 +109,7 @@ public class Distribuidor {
 					       		direccion.setCodPostal  (Integer.parseInt(cortarString2[4]));
 					       		distribuidor.setDireccion(direccion);
 	
-					       		Contacto contacto = new Contacto();
+					       		
 					       		cortarString3 = cortarString[2].split(",");
 					       		contacto.setNombre (cortarString3[0]);
 					       		contacto.setApellido (cortarString3[1]);
