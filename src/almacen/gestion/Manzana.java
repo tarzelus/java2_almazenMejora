@@ -54,12 +54,14 @@ public class Manzana extends Productos{
 	
 	//escrinir manzanas
 	Scanner sc = new Scanner(System.in);
-
+	String di;
 	
 	ArrayList<Manzana> manzanas = new ArrayList<Manzana>();
     ArrayList<String> distribuman = new ArrayList<String>();
     
-	public void escribirManzanas(){
+	private String getDistribuidor;
+    
+	public void escribirManzanas() throws IOException{
 		
 		System.out.println("\nCuantas manzanas quieres registrar?: ");
 		int cuantas = sc.nextInt();
@@ -77,40 +79,20 @@ public class Manzana extends Productos{
 			System.out.println("Introduce el numero del codigo de barras de la manzana: ");
 			manzana.setCod_barras(sc.nextInt());
 			System.out.println("Introduce el nombre del distribuidor de la manzana: ");
-			String di = sc.next();
-			distribuman.add(di);
-
-			manzanas.add(manzana);
-		
-		}
-	}
-	
-	
-	
-	
-	
-	public void impresionManzanas() throws IOException{
-
-		//---------impresion de las manzanas con sus respectivos distribuidor-------------
-		System.out.println(" \n\n**************manzanas**************" );
-		for (int m=0 ; m < manzanas.size(); m++){
-
-			System.out.println(" \n\nTipo de manzana: "+manzanas.get(m).getTipoManzana() );
-            System.out.println(" \nProcedencia: "+manzanas.get(m).getProcedencia());
-            System.out.println(" \nColor : "+manzanas.get(m).getColor() );
-            System.out.println(" \nEuros Kilo: "+manzanas.get(m).getEurosKilo());
-
-           
-            ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
-
-            distribuidores=Leerdistri.Leer();
-           
-	        for(int d=0; d<distribuidores.size(); d++)
+			di = sc.next();
+			
+	          
+            //ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
+            Distribuidor distri = new Distribuidor();
+            distri.leerDistri(di);
+			//distribuman.add(di);
+            /*for(int d=0; d<distribuidores.size(); d++)
         	{
-        		if (distribuman.get(m).equalsIgnoreCase(distribuidores.get(d).getNombre())){
+        		if (di.equalsIgnoreCase(distribuidores.get(d).getNombre())){
             	System.out.println("  -------Distribuidor de la manzana-----------");
-            	
-            		System.out.println(" 	Nombre: "+distribuidores.get(d).getNombre() );
+            	String nombre = distribuidores.get(d).getNombre();
+            	manzana.setDistribuidor(distribuidores.get(d));
+          
             		System.out.println(" \n 	CIF: "+distribuidores.get(d).getCif());
             		//---
             		System.out.println(" \n 	Direccion:" );
@@ -127,7 +109,50 @@ public class Manzana extends Productos{
             		System.out.println(" \n     	Email: "+ distribuidores.get(d).getPersonaContacto().getEmail());
             		System.out.println(" \n     	Telefono: "+ distribuidores.get(d).getPersonaContacto().getTelefono());
             		}
-        	}
+        	}*/
+
+			manzanas.add(manzana);
+		
+		}
+	}
+	
+	
+	
+	
+	
+	private void setDistribuidor(Object setNombre) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void impresionManzanas() throws IOException{
+
+		//---------impresion de las manzanas con sus respectivos distribuidor-------------
+		System.out.println(" \n\n**************manzanas**************" );
+		for (int m=0 ; m < manzanas.size(); m++){
+
+			System.out.println(" \n\nTipo de manzana: "+manzanas.get(m).getTipoManzana() );
+            System.out.println(" \nProcedencia: "+manzanas.get(m).getProcedencia());
+            System.out.println(" \nColor : "+manzanas.get(m).getColor() );
+            System.out.println(" \nEuros Kilo: "+manzanas.get(m).getEurosKilo());
+           
+           ArrayList<Distribuidor> diss = new ArrayList<Distribuidor>();
+           
+           diss = manzanas.get(m).getDistribuidor();
+           System.out.println(diss.get(m).getNombre());
+          /* for(int i=0; i<diss.size(); i++){
+            	System.out.println(diss.get(i).getNombre());
+            	System.out.println(diss.get(i).getCif());
+            	//System.out.println(getDistribuidor().get(i).getDireccion());
+            	//System.out.println(getDistribuidor().get(i).getPersonaContacto());
+            }*/	
+
+           
+            //ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
+
+            //distribuidores=Leerdistri.Leer();
+           
+	       
         }
 	}
 }
