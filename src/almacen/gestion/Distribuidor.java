@@ -59,7 +59,7 @@ public class Distribuidor {
 				personaContacto=personaContacto1;
 			}
 			
-			public void leerDistri(String di) throws IOException{
+			public ArrayList<Distribuidor> leerDistri(String di) throws IOException{
 				
 				
 			//	ArrayList<String> distribuman = new ArrayList<String>();
@@ -87,7 +87,7 @@ public class Distribuidor {
 				        Contacto contacto = new Contacto();
 			       		Direccion direccion = new Direccion();
 			       		Productos productos = new Productos();
-			       		Manzana manzana = new Manzana();
+			       		// manzana = new Manzana();
 
 				       
 				        while(salida2!=null){
@@ -122,11 +122,11 @@ public class Distribuidor {
 				   
 					       		distribuidores.add(distribuidor);
 
-					       		manzana.setDistribuidor(distribuidores);
+					       	//	manzana.setDistribuidor(distribuidores);
 				       		}
 				       		salida2 = bf2.readLine();
 				        }
-					
+					return distribuidores;
 						
 			}
 

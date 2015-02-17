@@ -7,7 +7,7 @@ public class Productos {
 	private int cod_barras;
 	private Double eurosKilo, eurosUnidad, eurosLitro;
 		
-	public ArrayList<Distribuidor> getDistribuidor()
+	public  ArrayList<Distribuidor> getDistribuidor()
 	{
 		return distribuidor;
 	}

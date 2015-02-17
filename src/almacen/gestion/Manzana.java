@@ -52,14 +52,13 @@ public class Manzana extends Productos{
 	
 	
 	
-	//escrinir manzanas
+	//escribir manzanas
 	Scanner sc = new Scanner(System.in);
-	String di;
+
 	
 	ArrayList<Manzana> manzanas = new ArrayList<Manzana>();
-    ArrayList<String> distribuman = new ArrayList<String>();
-    
-	private String getDistribuidor;
+
+	Distribuidor dist = new Distribuidor();
     
 	public void escribirManzanas() throws IOException{
 		
@@ -79,37 +78,9 @@ public class Manzana extends Productos{
 			System.out.println("Introduce el numero del codigo de barras de la manzana: ");
 			manzana.setCod_barras(sc.nextInt());
 			System.out.println("Introduce el nombre del distribuidor de la manzana: ");
-			di = sc.next();
+			String di = sc.next();
 			
-	          
-            //ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
-            Distribuidor distri = new Distribuidor();
-            distri.leerDistri(di);
-			//distribuman.add(di);
-            /*for(int d=0; d<distribuidores.size(); d++)
-        	{
-        		if (di.equalsIgnoreCase(distribuidores.get(d).getNombre())){
-            	System.out.println("  -------Distribuidor de la manzana-----------");
-            	String nombre = distribuidores.get(d).getNombre();
-            	manzana.setDistribuidor(distribuidores.get(d));
-          
-            		System.out.println(" \n 	CIF: "+distribuidores.get(d).getCif());
-            		//---
-            		System.out.println(" \n 	Direccion:" );
-            		System.out.println(" \n     	Ciudad: "+ distribuidores.get(d).getDireccion().getCiudad());
-            		System.out.println(" \n     	Calle: "+ distribuidores.get(d).getDireccion().getCalle());
-            		System.out.println(" \n    		Piso: "+ distribuidores.get(d).getDireccion().getPiso());
-            		System.out.println(" \n     	Portal: "+ distribuidores.get(d).getDireccion().getPortal());
-            		System.out.println(" \n     	Codigo Postal: "+ distribuidores.get(d).getDireccion().getCodPostal());
-            		//---
-            		System.out.println(" \n 	Contacto: " );
-            		System.out.println(" \n    		Nombre: "+ distribuidores.get(d).getPersonaContacto().getNombre());
-            		System.out.println(" \n     	Apellido: "+ distribuidores.get(d).getPersonaContacto().getApellido());
-            		System.out.println(" \n    		DNI: "+ distribuidores.get(d).getPersonaContacto().getDni());
-            		System.out.println(" \n     	Email: "+ distribuidores.get(d).getPersonaContacto().getEmail());
-            		System.out.println(" \n     	Telefono: "+ distribuidores.get(d).getPersonaContacto().getTelefono());
-            		}
-        	}*/
+			manzana.setDistribuidor(dist.leerDistri(di));
 
 			manzanas.add(manzana);
 		
@@ -117,7 +88,9 @@ public class Manzana extends Productos{
 	}
 	
 	
-
+	
+	
+	
 	public void impresionManzanas() throws IOException{
 
 		//---------impresion de las manzanas con sus respectivos distribuidor-------------
@@ -128,25 +101,33 @@ public class Manzana extends Productos{
             System.out.println(" \nProcedencia: "+manzanas.get(m).getProcedencia());
             System.out.println(" \nColor : "+manzanas.get(m).getColor() );
             System.out.println(" \nEuros Kilo: "+manzanas.get(m).getEurosKilo());
-           
-           ArrayList<Distribuidor> diss = new ArrayList<Distribuidor>();
-           
-           diss = manzanas.get(m).getDistribuidor();
-           System.out.println(diss.get(m).getNombre());
-           /*for(int i=0; i<diss.size(); i++){
-            	System.out.println(diss.get(i).getNombre());
-            	System.out.println(diss.get(i).getCif());
-            	//System.out.println(getDistribuidor().get(i).getDireccion());
-            	//System.out.println(getDistribuidor().get(i).getPersonaContacto());
-            }*/
 
            
-            //ArrayList<Distribuidor> distribuidores = new ArrayList<Distribuidor>();
-
-            //distribuidores=Leerdistri.Leer();
+            
            
-	       
+	     //   for(int d=0; d<getDistribuidor().size(); d++)
+        	//{
+        		//if (getDistribuidor().get(m).equalsIgnoreCase(distribuidores.get(d).getNombre())){
+            	System.out.println("  -------Distribuidor de la manzana-----------");
+            	
+            		System.out.println(" 	Nombre: "+getDistribuidor().get(m).getNombre() );
+            		System.out.println(" \n 	CIF: "+getDistribuidor().get(m).getCif());
+            		//---
+            		System.out.println(" \n 	Direccion:" );
+            		System.out.println(" \n     	Ciudad: "+ getDistribuidor().get(m).getDireccion().getCiudad());
+            		System.out.println(" \n     	Calle: "+ getDistribuidor().get(m).getDireccion().getCalle());
+            		System.out.println(" \n    		Piso: "+ getDistribuidor().get(m).getDireccion().getPiso());
+            		System.out.println(" \n     	Portal: "+ getDistribuidor().get(m).getDireccion().getPortal());
+            		System.out.println(" \n     	Codigo Postal: "+ getDistribuidor().get(m).getDireccion().getCodPostal());
+            		//---
+            		System.out.println(" \n 	Contacto: " );
+            		System.out.println(" \n    		Nombre: "+ getDistribuidor().get(m).getPersonaContacto().getNombre());
+            		System.out.println(" \n     	Apellido: "+ getDistribuidor().get(m).getPersonaContacto().getApellido());
+            		System.out.println(" \n    		DNI: "+ getDistribuidor().get(m).getPersonaContacto().getDni());
+            		System.out.println(" \n     	Email: "+ getDistribuidor().get(m).getPersonaContacto().getEmail());
+            		System.out.println(" \n     	Telefono: "+ getDistribuidor().get(m).getPersonaContacto().getTelefono());
+            		//}
+        	//}
         }
 	}
 }
-

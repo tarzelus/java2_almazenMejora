@@ -23,6 +23,7 @@ public static void main (String args[]) throws IOException{
     	Lechuga lechuga = new Lechuga();
     	Manzana manzana = new Manzana();
     	Cliente cliente = new Cliente();
+    	
     	Cesta cesta = new Cesta();
 		
 		do 
