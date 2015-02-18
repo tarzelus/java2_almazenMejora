@@ -2,7 +2,7 @@ package almacen.gestion;
 
 import java.util.ArrayList;
 
-public class Productos {
+public class Productos implements Modificar{
 	private ArrayList<Distribuidor> distribuidor;
 	private int cod_barras;
 	private Double eurosKilo, eurosUnidad, eurosLitro;
@@ -12,9 +12,9 @@ public class Productos {
 		return distribuidor;
 	}
 	
-	public void  setDistribuidor(ArrayList<Distribuidor> distribuidor1)
+	public void  setDistribuidor(ArrayList<Distribuidor> distribuidor2)
 	{
-		distribuidor=distribuidor1;
+		distribuidor=distribuidor2;
 	}
 	
 	public int getCod_barras()
@@ -54,6 +54,18 @@ public class Productos {
 	public void  setEurosLitro(Double eurosLitro1)
 	{
 		eurosLitro=eurosLitro1;
+	}
+
+	@Override
+	public void Borrar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Modificar() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

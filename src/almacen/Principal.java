@@ -4,6 +4,7 @@ package almacen;
 import java.util.*;
 import java.io.*;
 
+import almacen.gestion.Borrar;
 import almacen.gestion.Cesta;
 import almacen.gestion.Cliente;
 import almacen.gestion.Leche;
@@ -23,6 +24,7 @@ public static void main (String args[]) throws IOException{
     	Lechuga lechuga = new Lechuga();
     	Manzana manzana = new Manzana();
     	Cliente cliente = new Cliente();
+    	Borrar borrar = new Borrar();
     	
     	Cesta cesta = new Cesta();
 		
@@ -32,8 +34,9 @@ public static void main (String args[]) throws IOException{
 		System.out.println(" \nQue quieres hacer?:" );
     	System.out.println(" \n 	1) Introducir nuevo producto" );
     	System.out.println(" \n 	2) Lectura de productos" );
-    	System.out.println(" \n 	3) Ver los Clientes" );
-    	System.out.println(" \n 	4) Crear Cesta" );
+    	System.out.println(" \n 	3) Eliminar productos" );
+    	System.out.println(" \n 	4) Ver los Clientes" );
+    	System.out.println(" \n 	5) Crear Cesta" );
     	System.out.println(" \n 	0) Salir" );
     	quehacer = sc.nextInt();
 
@@ -65,7 +68,7 @@ public static void main (String args[]) throws IOException{
 			break;
 			
 	    	case 3:
-	    		cliente.leerCliente();
+	    		borrar.borrarProducto();
 	    	break;
 	    	
 	    	case 4:

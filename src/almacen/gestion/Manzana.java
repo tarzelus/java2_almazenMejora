@@ -96,7 +96,7 @@ public class Manzana extends Productos{
 		//---------impresion de las manzanas con sus respectivos distribuidor-------------
 		System.out.println(" \n\n**************manzanas**************" );
 		for (int m=0 ; m < manzanas.size(); m++){
-
+			System.out.println(" \n\n---"+m+"---");
 			System.out.println(" \n\nTipo de manzana: "+manzanas.get(m).getTipoManzana() );
             System.out.println(" \nProcedencia: "+manzanas.get(m).getProcedencia());
             System.out.println(" \nColor : "+manzanas.get(m).getColor() );
@@ -129,5 +129,9 @@ public class Manzana extends Productos{
             		//}
         	//}
         }
+					
+	}
+	public void borrarManzana (int numeroBorrar){
+		manzanas.remove(numeroBorrar);
 	}
 }
